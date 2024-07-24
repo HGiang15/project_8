@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-Experience the live demo [here](https://github.com/HGiang15/project_8.git).
+Experience the live demo [here](https://hgiang15.github.io/project_8/).
 
 ## ✨ Features
 
