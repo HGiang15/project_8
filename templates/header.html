@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- More on mobile/tablet -->
-        <button class="top-bar__more">
+        <button class="top-bar__more js-toggle" toggle-target="#navbar">
             <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon">
         </button>
 
@@ -12,7 +12,12 @@
         </a>
 
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <!-- Responsive for tablet/mobile -->
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="./assets/icons/arrow-left.svg" alt="">
+            </button>
+
             <ul class="navbar__list js-dropdown-list">
                 <!-- Navbar item 1 -->
                 <li class="navbar__item">
@@ -4541,6 +4546,11 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Responsive for tablet/mobile -->
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar">
+
+        </div>
 
         <!-- Actions -->
         <div class="top-act">
