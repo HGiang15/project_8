@@ -108,19 +108,34 @@ function handleActiveMenu() {
         menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
     };
 
+    // Viết cách khác thay chỗ Optional Chaining (?.)
+    // const removeActive = (menu) => {
+    //     const activeElement = menu.querySelector(`.${activeClass}`);
+    //     if (activeElement) {
+    //         activeElement.classList.remove(activeClass);
+    //     }
+    // };
+
     const init = () => {
         menus.forEach((menu) => {
             const items = menu.children;
             if (!items.length) return;
 
             removeActive(menu);
-            items[0].classList.add(activeClass);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
 
             Array.from(items).forEach((item) => {
                 item.onmouseenter = () => {
                     if (window.innerWidth <= 991) return;
                     removeActive(menu);
                     item.classList.add(activeClass);
+                };
+
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
                 };
             });
         });
@@ -161,3 +176,16 @@ function initJsToggle() {
         };
     });
 }
+
+// Responsive, click icon mở menu ra
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar__item--active");
+        };
+    });
+});
