@@ -14,9 +14,21 @@
         <!-- Navbar -->
         <nav id="navbar" class="navbar show">
             <!-- Responsive for tablet/mobile -->
-            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
-                <img src="./assets/icons/arrow-left.svg" alt="">
+            <button class="navbar__close-btn d-none d-lg-flex js-toggle" toggle-target="#navbar">
+                <img class="icon" src="./assets/icons/arrow-left.svg" alt="">
             </button>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icons/buy.svg" alt="" class="nav-btn__icon icon">
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">8</span>
+            </a>
+
+            <a href="#!" class="nav-btn d-none d-md-flex">
+                <img src="./assets/icons/heart.svg" alt="" class="nav-btn__icon icon">
+                <span class="nav-btn__title">Favorite</span>
+                <span class="nav-btn__qnt">6</span>
+            </a>
 
             <ul class="navbar__list js-dropdown-list">
                 <!-- Navbar item 1 -->
