@@ -189,3 +189,23 @@ window.addEventListener("template-loaded", () => {
         };
     });
 });
+
+// Slide Show
+// Cách dùng thêm class="mySlides" vào các slideshow
+let slideIndex = 1;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[slideIndex - 1].style.display = "block";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    // Điều chỉnh thông số chạy slide theo giây(ms)
+    setTimeout(showSlides, 3000);
+}
