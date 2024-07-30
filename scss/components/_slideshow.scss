@@ -10,9 +10,9 @@
 
     &__item {
         position: relative;
+        padding-top: 34%; /* 455 / 1340 = 34% width the cha*/
         flex-shrink: 0;
         width: 100%;
-        padding-top: 34%; /* 455 / 1340 = 34% width the cha*/
 
         @include abstracts.screen(md) {
             padding-top: 50%;
