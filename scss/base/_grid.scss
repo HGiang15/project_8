@@ -1,6 +1,11 @@
 @use "sass:math";
 
 // Breakpoints, dimension, container, row, column, v.v
+// xxl: 1399.98px trở lên
+// xl: từ 1199.98px đến 1399.98px
+// lg: từ 991.98px đến 1199.98px
+// md: từ 767.98px đến 991.98px
+// sm: từ 575.98px đến 767.98px
 $grid-breakpoints: (
     xxl: 1400px,
     xl: 1200px,
