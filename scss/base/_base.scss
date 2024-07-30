@@ -26,12 +26,13 @@ button {
     background: transparent;
 }
 
-a,
+a[href],
 img,
 button,
 input,
 textarea,
-select {
+select,
+[tabindex] {
     font-family: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
