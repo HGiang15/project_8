@@ -68,30 +68,38 @@
                     <!-- Email -->
                     <div class="form__group">
                         <div class="form__text-input">
-                            <input type="email" placeholder="Email" class="form__input">
+                            <input type="email" placeholder="Email" class="form__input" required>
                             <img src="./assets/icons/message.svg" alt="" class="form__input-icon">
+                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
                         </div>
+                        <p class="form__error">Email is not incorrect format</p>
                     </div>
 
                     <!-- Password -->
                     <div class="form__group">
                         <div class="form__text-input">
-                            <input type="password" placeholder="Password" class="form__input">
+                            <input type="password" placeholder="Password" class="form__input" required minlength="6">
                             <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
+                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
                         </div>
+                        <p class="form__error">Password at least 6 characters</p>
                     </div>
 
                     <!-- Confirm password -->
                     <div class="form__group">
                         <div class="form__text-input">
-                            <input type="password" placeholder="Confirm password" class="form__input">
+                            <input type="password" placeholder="Confirm password" class="form__input" required
+                                minlength="6">
                             <img src="./assets/icons/lock.svg" alt="" class="form__input-icon">
+                            <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error">
                         </div>
+                        <p class="form__error">Password at least 6 characters</p>
                     </div>
 
+                    <!-- Checkbox -->
                     <div class="form__group form__group--inline">
                         <label class="form__checkbox">
-                            <input type="checkbox" class="form__checkbox-input">
+                            <input type="checkbox" class="form__checkbox-input d-none" checked>
                             <span class="form__checkbox-label">Set as default card</span>
                         </label>
 
@@ -100,10 +108,10 @@
 
                     <!-- Actions -->
                     <div class="form__group auth__btn-group">
-                        <button class="btn btn--primary auth__btn">Sign Up</button>
+                        <button class="btn btn--primary auth__btn form__submit-btn">Sign Up</button>
                         <button class="btn btn--outline auth__btn btn--no-margin">
                             <img src="./assets/icons/google.svg" alt="" class="btn__icon">
-                            Sign in with Gmail
+                            Sign in with Google
                         </button>
                     </div>
                 </form>
