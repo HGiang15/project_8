@@ -1409,6 +1409,11 @@ html {
     --cate-item-bg-color: #fff;
   }
 }
+@media (max-width: 767.98px) {
+  html {
+    --auth-intro-bg-color: #fff;
+  }
+}
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
@@ -2549,6 +2554,11 @@ html {
 .form__group {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group--inline {
   display: flex;
   align-items: center;
@@ -2709,6 +2719,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  background: var(--auth-intro-bg-color);
 }
 .auth__intro-logo, .auth__intro-next {
   position: absolute;
@@ -2760,6 +2771,11 @@ html {
   margin: 0 auto;
   padding: 50px 0;
 }
+@media (max-width: 767.98px) {
+  .auth__content-inner {
+    padding: 32px 0;
+  }
+}
 .auth__heading {
   margin-top: 50px;
   font-size: 3rem;
@@ -2768,6 +2784,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .auth__heading {
+    margin-top: 40px;
     font-size: 2.2rem;
   }
 }
@@ -2810,6 +2827,12 @@ html {
   gap: 30px;
   margin-top: 50px;
 }
+@media (max-width: 767.98px) {
+  .auth__btn-group {
+    margin-top: 40px;
+    gap: 20px;
+  }
+}
 .auth__btn {
   width: 100%;
 }
@@ -2821,6 +2844,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .auth__text {
+    margin-top: 40px;
     font-size: 1.6rem;
   }
 }
