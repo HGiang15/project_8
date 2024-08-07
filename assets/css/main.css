@@ -2662,7 +2662,7 @@ html {
 .form__checkbox:has(:checked)::after {
   width: 15px;
   height: 8px;
-  top: 5px;
+  top: 4px;
   left: 2px;
   rotate: -45deg;
   border: 3px solid;
@@ -2670,6 +2670,19 @@ html {
 }
 .form__pull-right {
   margin-left: auto;
+}
+
+.message {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.message--success {
+  border: 1.5px solid #46a05c;
+  background: rgba(39, 243, 117, 0.2);
 }
 
 .home__container {
@@ -2739,6 +2752,7 @@ html {
   bottom: 50px;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-text {
@@ -2808,9 +2822,15 @@ html {
     font-size: 1.4rem;
   }
 }
+.auth__message {
+  margin-top: 30px;
+}
 .auth__form {
   width: 100%;
   margin-top: 30px;
+}
+.auth__form-forgot {
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .auth__form {
