@@ -1,3 +1,7 @@
+@use "../abstracts";
+
+$error-color: #ed4337;
+
 .form {
     &:has(:invalid) &__submit-btn {
         opacity: 0.5;
@@ -13,11 +17,11 @@
         }
     }
 
-    // ptử con ko hợp lệ và 1 ptử con &__input không hiển thị placeholder
+    // ptử con ko hợp lệ VÀ 1 ptử con &__input không hiển thị placeholder
     &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
         .form__text-input {
-            border-color: red;
-            background: rgba($color: red, $alpha: 0.1);
+            border-color: $error-color;
+            background: rgba($color: $error-color, $alpha: 0.1);
         }
 
         .form__error,
@@ -42,6 +46,10 @@
         &:focus-within {
             border-color: #77dae6;
         }
+
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
     }
 
     &__input {
@@ -58,6 +66,10 @@
         &::placeholder {
             color: #d2d1d6;
         }
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__error {
@@ -65,14 +77,14 @@
         font-size: 1.4rem;
         font-weight: 500;
         margin-top: 10px;
-        color: red;
+        color: $error-color;
         display: none;
     }
 
     &__input-icon-error {
         display: none;
         margin-left: 12px;
-        animation: shake 0.8s;
+        animation: shake 0.5s;
     }
 
     &__checkbox {
@@ -88,6 +100,10 @@
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+
+            @include abstracts.screen(md) {
+                font-size: 1.4rem;
+            }
         }
 
         &::before,
