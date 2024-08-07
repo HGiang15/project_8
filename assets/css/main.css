@@ -2752,7 +2752,7 @@ html {
   bottom: 50px;
 }
 .auth__intro-img {
-  width: var(--width);
+  width: 424px;
   max-width: 100%;
 }
 .auth__intro-text {
