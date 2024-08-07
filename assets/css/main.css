@@ -1364,6 +1364,11 @@ html.dark {
   --filter-form-tag-bg: #171c28;
   --filter-form-arrow-color: brightness(0) saturate(100%) invert(14%) sepia(4%) saturate(4130%) hue-rotate(186deg)
       brightness(95%) contrast(81%);
+  --auth-content-bg-color: #292e39;
+  --auth-intro-bg-color: #171c28;
+  --auth-intro-text-color: #b9babe;
+  --auth-heading-color: #b9babe;
+  --form-placeholder-color: #b9babe;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1397,6 +1402,7 @@ html {
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
   --auth-content-bg-color: #fff;
+  --form-placeholder-color: #d2d1d6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2601,7 +2607,7 @@ html {
   margin-left: 12px;
 }
 .form__input::placeholder {
-  color: #d2d1d6;
+  color: var(--form-placeholder-color);
 }
 @media (max-width: 767.98px) {
   .form__input {
@@ -2781,6 +2787,7 @@ html {
   font-size: 3rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--auth-heading-color);
 }
 @media (max-width: 767.98px) {
   .auth__heading {
@@ -2790,7 +2797,7 @@ html {
 }
 .auth__desc {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #9e9da8;
   font-size: 1.5rem;
   font-weight: 500;
@@ -2841,6 +2848,7 @@ html {
   color: #9e9da8;
   font-size: 1.8rem;
   line-height: 144.444%;
+  color: var(--auth-intro-text-color);
 }
 @media (max-width: 767.98px) {
   .auth__text {

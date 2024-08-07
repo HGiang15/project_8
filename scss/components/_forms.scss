@@ -68,7 +68,7 @@ $error-color: #ed4337;
         }
 
         &::placeholder {
-            color: #d2d1d6;
+            color: var(--form-placeholder-color);
         }
 
         @include abstracts.screen(md) {
