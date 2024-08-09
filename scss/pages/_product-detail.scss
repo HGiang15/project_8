@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .product-page {
     display: flex;
     flex-direction: column;
@@ -13,9 +15,18 @@
 .product-preview {
     padding: 0 30px;
 
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     &__list {
         display: flex;
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            flex: 1;
+        }
     }
 
     &__item {
@@ -40,6 +51,15 @@
         justify-content: center;
         gap: 16px;
         padding: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding-left: 0;
+        }
+
+        @include abstracts.screen(md) {
+            display: none;
+        }
     }
 
     &__thumb-img {
@@ -68,6 +88,15 @@
 .product-info {
     padding: 60px;
     background: #f6f6f6;
+
+    @include abstracts.screen(xxl) {
+        padding: 40px;
+    }
+
+    @include abstracts.screen(lg) {
+        margin-top: 30px;
+    }
+
     &__heading {
         font-size: 2.6rem;
         font-weight: 500;
@@ -79,7 +108,7 @@
     }
 
     &__tag {
-        background: #EDEDF6;
+        background: #ededf6;
     }
 
     &__card {
@@ -133,6 +162,10 @@
 
 .product-props {
     padding-left: 30px;
+
+    @include abstracts.screen(xxl) {
+        padding-left: 10px;
+    }
 }
 
 .product-prop {
