@@ -2984,6 +2984,7 @@ html {
 
 .product-info {
   padding: 60px;
+  background: #f6f6f6;
 }
 .product-info__heading {
   font-size: 2.6rem;
@@ -2992,6 +2993,50 @@ html {
 }
 .product-info__label {
   margin-top: 30px;
+}
+.product-info__tag {
+  background: #EDEDF6;
+}
+.product-info__card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #b9babe;
+}
+.product-info__row {
+  display: flex;
+  align-items: center;
+}
+.product-info__price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.product-info__tax {
+  padding: 2px 8px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+  color: #67b044;
+}
+.product-info__total-price {
+  margin: 20px 0;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 138.462%;
+}
+.product-info__add-to-cart {
+  flex: 1;
+}
+.product-info__like-btn {
+  margin-left: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
+  background: transparent;
 }
 
 .product-props {
